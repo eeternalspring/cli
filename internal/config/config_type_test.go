@@ -54,6 +54,8 @@ func Test_defaultConfig(t *testing.T) {
 		http_unix_socket:
 		# What web browser gh should use when opening URLs. If blank, will refer to environment.
 		browser:
+		# If ENV should be overriden for hosts.yml.
+		override_env: false
 	`)
 	assert.Equal(t, expected, mainBuf.String())
 	assert.Equal(t, "", hostsBuf.String())

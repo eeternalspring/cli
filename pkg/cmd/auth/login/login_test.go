@@ -288,7 +288,7 @@ func Test_loginRun_nontty(t *testing.T) {
 			wantErr: "SilentError",
 			wantStderr: heredoc.Doc(`
 				The value of the GH_TOKEN environment variable is being used for authentication.
-				To have GitHub CLI store credentials instead, first clear the value from the environment.
+				To have GitHub CLI store credentials instead, first clear the value from the environment, or rerun the command with the ` + "`--force-auth` or `-f` flags." + `
 			`),
 		},
 		{
@@ -303,7 +303,7 @@ func Test_loginRun_nontty(t *testing.T) {
 			wantErr: "SilentError",
 			wantStderr: heredoc.Doc(`
 				The value of the GH_ENTERPRISE_TOKEN environment variable is being used for authentication.
-				To have GitHub CLI store credentials instead, first clear the value from the environment.
+				To have GitHub CLI store credentials instead, first clear the value from the environment, or rerun the command with the ` + "`--force-auth` or `-f` flags." + `
 			`),
 		},
 	}

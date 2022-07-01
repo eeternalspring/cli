@@ -71,6 +71,10 @@ func (c ConfigStub) WriteHosts() error {
 	return nil
 }
 
+func (c ConfigStub) OverrideEnv(string) bool {
+	return false
+}
+
 func (c ConfigStub) DefaultHost() (string, error) {
 	return "", nil
 }
